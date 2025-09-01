@@ -176,6 +176,7 @@ public class SauceLabsTest extends BaseClass {
     	
     	 By reviewOrder = By.xpath("//android.widget.TextView[@text=\"Review Order\"]");
          wait.until(ExpectedConditions.elementToBeClickable(reviewOrder)).click();
+         pause(500);
          
     } 
     

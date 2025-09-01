@@ -62,6 +62,14 @@ public class BaseClass {
         }
     }
 
+    protected void pause(long millis) {
+        try {
+            Thread.sleep(millis);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt(); // bonne pratique pour réinterrompre le thread
+        }
+    }
+
     @AfterEach
     public void tearDown() {
         if (driver != null) driver.quit();
